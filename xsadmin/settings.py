@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 """
 Django settings for xsadmin project.
 
@@ -203,7 +204,7 @@ SESSION_CACHE_ALIAS = "default"
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
+        "LOCATION": "redis://www.along.party:16379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -211,7 +212,7 @@ CACHES = {
 }
 
 CELERY_BROKER_TRANSPORT = 'redis'
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/1'
+CELERY_BROKER_URL = 'redis://www.along.party:16379/1'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIME_ZONE = TIME_ZONE
